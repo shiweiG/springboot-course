@@ -21,14 +21,16 @@ public class UserOne {
     @Column(length = 16)
     private UUID id;
     private String name;
-    private LocalDate birthday;
+   private LocalDate birthday;
     @Column( columnDefinition = "timestamp default current_timestamp" ,
             insertable = false,
             updatable = false)
     private LocalDateTime insertTime ;
     @Column( columnDefinition = "timestamp default current_timestamp"+
-            " on update current_ timestamp",
+            " on update current_timestamp",
             insertable = false,
             updatable = false)
     private LocalDateTime updateTime;
+
+
 }
