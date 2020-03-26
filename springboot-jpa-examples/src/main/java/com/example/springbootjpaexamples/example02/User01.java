@@ -1,5 +1,6 @@
-package com.example.springbootjpaexamples.example;
+package com.example.springbootjpaexamples.example02;
 
+import com.example.springbootjpaexamples.example02.AddressOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

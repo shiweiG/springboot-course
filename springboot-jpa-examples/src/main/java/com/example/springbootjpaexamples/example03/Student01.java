@@ -1,24 +1,22 @@
-package com.example.springbootjpaexamples.example;
+package com.example.springbootjpaexamples.example03;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
+
 @Data
-@Entity
 @NoArgsConstructor
-public class User {
+@Entity
+public class Student01 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)//自增长主键
-/*@GeneratedvValue
-* private UUID id;*/
-//    @Column(name ="name",length = 16)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(length = 16)
     private String name;
-    private String number;
-    private LocalDate birthday;
+    @OneToMany(mappedBy = "student")
+    private List<Elective>electives;
     @Column( columnDefinition = "timestamp default current_timestamp" ,
             insertable = false,
             updatable = false)
@@ -28,5 +26,4 @@ public class User {
             insertable = false,
             updatable = false)
     private LocalDateTime updateTime;
-
 }

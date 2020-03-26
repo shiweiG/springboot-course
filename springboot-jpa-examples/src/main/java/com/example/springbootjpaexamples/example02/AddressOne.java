@@ -1,4 +1,4 @@
-package com.example.springbootjpaexamples.example;
+package com.example.springbootjpaexamples.example02;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
