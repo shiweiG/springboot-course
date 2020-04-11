@@ -1,0 +1,18 @@
+###
+GET http://localhost:8080/api/example01/index
+###
+
+GET http://localhost:8080/api/example01/address
+###
+
+POST http://localhost:8080/api/example01/address
+Content-Type: application/json
+
+{
+  "detail":"956",
+  "comment":"123456"
+}
+###
+
+GET http://localhost:8080/api/example01/address/1
+###
