@@ -2,25 +2,23 @@ package com.example.springbootjpaexamples.example07.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
-@Entity
 @Data
+@Entity
 @NoArgsConstructor
-public class User07 {
+public class UserAddress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
-    @OneToMany(mappedBy = "user07")
-    private List<UserAddress>userAddresses;
+    @ManyToOne
+    private User07 user07;
+    @ManyToOne
+    private Address07 address07;
     @Column( columnDefinition = "timestamp default current_timestamp" ,
             insertable = false,
             updatable = false)
     private LocalDateTime insertTime ;
-
 }

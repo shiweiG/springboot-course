@@ -1,0 +1,19 @@
+GET http://localhost:8080/api/example03/users/s
+Accept: application/json
+
+###
+###校验失败异常
+POST http://localhost:8080/api/example03/users
+Content-Type: application/json
+
+{
+ "name": "a",
+  "age": "17",
+  "email": "asds"
+}
+
+###
+GET http://localhost:8080/api/example03/users/aaa/file
+
+
+###

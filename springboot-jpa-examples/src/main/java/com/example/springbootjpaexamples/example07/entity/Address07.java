@@ -2,9 +2,10 @@ package com.example.springbootjpaexamples.example07.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -14,7 +15,10 @@ public class Address07 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String detail;
-    @ManyToOne
-    private User07 user07;
-
+    @OneToMany(mappedBy = "address07")
+    private List<UserAddress>userAddresses;
+    @Column( columnDefinition = "timestamp default current_timestamp" ,
+            insertable = false,
+            updatable = false)
+    private LocalDateTime insertTime ;
 }

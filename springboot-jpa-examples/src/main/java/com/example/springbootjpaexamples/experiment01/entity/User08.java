@@ -1,8 +1,8 @@
-package com.example.springbootjpaexamples.example07.entity;
+package com.example.springbootjpaexamples.experiment01.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -11,13 +11,14 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class User07 {
+@AllArgsConstructor
+public class User08 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @OneToMany(mappedBy = "user07")
-    private List<UserAddress>userAddresses;
+    @OneToMany(mappedBy = "user08")
+    private List<Address08>address08s;
     @Column( columnDefinition = "timestamp default current_timestamp" ,
             insertable = false,
             updatable = false)

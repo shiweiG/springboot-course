@@ -1,11 +1,9 @@
 package com.example.springbootmvcexample.example01;
 
-import com.example.springbootmvcexample.entity.Address;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.example.springbootmvcexample.example01.entity.Address;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
-import java.security.PublicKey;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;

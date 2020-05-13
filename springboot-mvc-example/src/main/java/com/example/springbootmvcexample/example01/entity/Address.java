@@ -1,11 +1,9 @@
-package com.example.springbootmvcexample.entity;
+package com.example.springbootmvcexample.example01.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
@@ -17,6 +15,7 @@ public class Address {
     private String detail;
     private String comment;
     private User user;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime inertTime;
 
 public Address( Integer id,String detail,String comment,LocalDateTime inertTime){
